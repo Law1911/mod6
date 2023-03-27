@@ -36,5 +36,15 @@ namespace MOD6_1302210106
             Console.WriteLine("Title :" + title);
             Console.WriteLine("PlayCount : " + playCount);
         }
+
+        public int getCount()
+        {
+            return this.playCount;
+        }
+
+        public String getTitle()
+        {
+            return this.title;
+        } 
     }
 }
