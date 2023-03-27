@@ -16,7 +16,7 @@ namespace MOD6_1302210106
         public SayaTubeVideo(String title)
         {
             this.title = title;
-            var a = this.title.Substring(0, Math.Min(100, this.title.Length));
+            var a = this.title.Substring(0, Math.Min(200, this.title.Length));
 
             String digit = "";
             Random random  = new Random();
@@ -27,7 +27,19 @@ namespace MOD6_1302210106
 
         public void IncreasePlayCount(int x)
         {
-            playCount = playCount+ x;
+            if (x <= 25000000)
+            {
+                int y = 0;
+                try
+                {
+                    y = checked(x + 10);
+                }
+                catch (System.OverflowException b)
+                {
+                    Console.WriteLine("Check : " + b.ToString);
+                    Console.WriteLine("Data Melebihi limit input");
+                }
+            }
         }
 
         public void PrintVideoDetails()
