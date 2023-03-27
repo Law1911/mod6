@@ -8,5 +8,7 @@ namespace MOD6_1302210106
 {
     internal class SayaTubeUser
     {
+        private int id;
+        
     }
 }
